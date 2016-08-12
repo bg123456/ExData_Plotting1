@@ -29,7 +29,7 @@ lines(timeDate, as.numeric(temp$Sub_metering_2), col = "red")
 lines(timeDate, as.numeric(temp$Sub_metering_3), col = "blue")
 legend("topright",lty=1,col=c("black","red","blue"),
        legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
-plot(timeDate, temp$Voltage, type = "l", ylab="Voltage", xlab ="datetime")
-plot(timeDate, temp$Global_reactive_power, type = "l", 
+plot(timeDate, as.numeric(temp$Voltage), type = "l", ylab="Voltage", xlab ="datetime")
+plot(timeDate, as.numeric(temp$Global_reactive_power), type = "l", 
      ylab="Global_reactive_power", xlab ="datetime")
 dev.off()
